@@ -1,0 +1,902 @@
+/* OceanTrust - Blue & White Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --navy: #003b8b;
+  --primary: #0056d6;
+  --light-blue: #e3f2fd;
+  --white: #ffffff;
+  --dark-text: #1a1a1a;
+  --gray: #6c757d;
+  --light-gray: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Golos Text', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+  background: var(--white);
+}
+
+.text-navy { color: var(--navy) !important; }
+.bg-navy { background-color: var(--navy) !important; }
+.bg-light-blue { background-color: var(--light-blue) !important; }
+
+/* Navbar */
+.navbar {
+  transition: all 0.3s ease;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 59, 139, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+}
+
+.nav-link {
+  color: var(--gray) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../home.png') center/cover;
+  color: var(--white);
+}
+
+.overlay {
+  background: rgba(0, 59, 139, 0.4);
+}
+
+/* Advantages Section */
+.advantages-section {
+  background: var(--light-blue);
+  padding: 100px 0;
+}
+
+.adv-card {
+  background: var(--white);
+  height: 100%;
+  padding: 50px 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 86, 214, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 86, 214, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.adv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--navy));
+}
+
+.adv-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 40px 80px rgba(0, 86, 214, 0.2);
+}
+
+.adv-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 86, 214, 0.1), rgba(0, 59, 139, 0.1));
+  border-radius: 50%;
+  border: 2px solid rgba(0, 86, 214, 0.2);
+}
+
+.adv-icon img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 86, 214, 0.3));
+}
+
+.adv-card h5 {
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.adv-card p {
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Stats */
+.bg-navy {
+  background: var(--navy) !important;
+}
+
+.stats-section h3 {
+  color: var(--white);
+  font-weight: 800;
+}
+
+.stats-section p {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Services */
+.services-section {
+  background: var(--white);
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 86, 214, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 86, 214, 0.2);
+}
+
+.card-body {
+  padding: 40px;
+}
+
+/* Steps */
+/* === Steps / Tahapan Pengiriman === */
+
+
+/* === Tahapan Pengiriman === */
+.steps-section {
+  position: relative;
+  background: url("../a2.jpg") center / cover no-repeat;
+}
+
+/* Overlay hitam transparan */
+.steps-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Pastikan konten di atas overlay */
+.steps-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Card */
+.step-card {
+  background: #ffffff;
+  height: 100%;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 86, 214, 0.25);
+}
+
+/* Icon / Number */
+.step-icon {
+  width: 65px;
+  height: 65px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+/* Text */
+.step-card h6 {
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Desktop tweak (5 kolom rapih) */
+@media (min-width: 992px) {
+  .steps-grid > div {
+    flex: 0 0 auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .step-card {
+    padding: 30px 22px;
+  }
+}
+
+/* Contact */
+#contact {
+  background: linear-gradient(135deg, var(--navy), #001f5b);
+}
+
+/* Footer */
+.footer {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.footer h5 {
+  color: var(--white);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--navy));
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 14px 32px;
+  box-shadow: 0 8px 25px rgba(0, 86, 214, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 86, 214, 0.4);
+  background: linear-gradient(135deg, var(--navy), var(--primary));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem !important; }
+  .display-4 { font-size: 2rem !important; }
+  section { padding: 60px 0 !important; }
+}
+
+html { scroll-behavior: smooth; }
+
+/* Smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.adv-card, .card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Vision */
+/* === Vision Layout (Match Reference Design) === */
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* kiri teks besar, kanan gambar */
+  gap: 60px;
+  align-items: start;
+}
+
+.vision-layout {
+  background: #061b2d;
+  padding: 120px 0;
+  color: #ffffff;
+}
+
+/* LEFT */
+.vision-left {
+  padding-top: 40px;
+}
+
+.vision-small {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.vision-title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* RIGHT */
+.vision-right {
+  max-width: 720px;
+}
+
+/* Image */
+.vision-image {
+  width: 100%;
+  height: 300px;
+  background: url("../bg.png") center / cover no-repeat;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  margin-bottom: 35px;
+}
+
+/* Description under image */
+.vision-desc {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 640px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vision-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+  }
+
+  .vision-title {
+    font-size: 2.8rem;
+  }
+
+  .vision-right {
+    margin-top: 40px;
+  }
+
+  .vision-desc {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Navbar scroll */
+.navbar.scrolled {
+  background: rgba(255,255,255,0.98) !important;
+  box-shadow: 0 5px 20px rgba(0, 86, 214, 0.15);
+}
+
+ * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
+
+        /* --- BAGIAN 1: DAFTAR HARGA (PRICELIST) DENGAN BACKGROUND PARALLAX --- */
+        .pricing-section {
+            background-image: linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 20, 50, 0.85)), 
+                              url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            padding: 100px 0;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 20px;        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
+
+        /* --- BAGIAN 1: DAFTAR HARGA (PRICELIST) DENGAN BACKGROUND PARALLAX --- */
+        .pricing-section {
+            background-image: linear-gradient(rgba(0, 20, 50, 0.85), rgba(0, 20, 50, 0.85)), 
+                              url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            padding: 100px 0;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            background: #ffffff;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .price-val { color: #003b8b; font-weight: 800; font-size: 2.2rem; }
+        
+        .btn-maritim {
+            background-color: #003b8b;
+            color: white;
+            border-radius: 12px;
+            padding: 12px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-maritim:hover { background-color: #0056d6; color: white; }
+
+        /* --- BAGIAN 2: PELACAKAN (TRACKING) DENGAN BACKGROUND PETA --- */
+        .tracking-section {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.98) 45%, rgba(255,255,255,0.3) 100%), 
+                              url('https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+        }
+
+        .tracking-box {
+            background: white;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Timeline Maritim */
+        .timeline-container { position: relative; padding-left: 50px; }
+        
+        .timeline-line {
+            position: absolute;
+            left: 17px; top: 10px; bottom: 10px;
+            width: 2px;
+            background: #e9ecef;
+        }
+
+        .timeline-line-active { 
+            position: absolute;
+            left: 17px; top: 10px;
+            width: 2px;
+            background: #003b8b; 
+            height: 55%; /* Menunjukkan progres perjalanan */
+        } 
+
+        .node {
+            position: absolute;
+            left: 0;
+            width: 36px; height: 36px;
+            background: white;
+            border: 3px solid #dee2e6;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 2;
+        }
+
+        .node-active { border-color: #003b8b; background: #003b8b; color: white; }
+        .node-done { border-color: #198754; background: #198754; color: white; }
+
+        .vessel-tag {
+            background: #f1f4f9;
+            border-radius: 12px;
+            padding: 15px;
+            border-left: 5px solid #003b8b;
+        }
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            background: #ffffff;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .price-val { color: #003b8b; font-weight: 800; font-size: 2.2rem; }
+        
+        .btn-maritim {
+            background-color: #003b8b;
+            color: white;
+            border-radius: 12px;
+            padding: 12px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-maritim:hover { background-color: #0056d6; color: white; }
+
+        /* --- BAGIAN 2: PELACAKAN (TRACKING) DENGAN BACKGROUND PETA --- */
+        .tracking-section {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.98) 45%, rgba(255,255,255,0.3) 100%), 
+                              url('https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+        }
+
+        .tracking-box {
+            background: white;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Timeline Maritim */
+        .timeline-container { position: relative; padding-left: 50px; }
+        
+        .timeline-line {
+            position: absolute;
+            left: 17px; top: 10px; bottom: 10px;
+            width: 2px;
+            background: #e9ecef;
+        }
+
+        .timeline-line-active { 
+            position: absolute;
+            left: 17px; top: 10px;
+            width: 2px;
+            background: #003b8b; 
+            height: 55%; /* Menunjukkan progres perjalanan */
+        } 
+
+        .node {
+            position: absolute;
+            left: 0;
+            width: 36px; height: 36px;
+            background: white;
+            border: 3px solid #dee2e6;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 2;
+        }
+
+        .node-active { border-color: #003b8b; background: #003b8b; color: white; }
+        .node-done { border-color: #198754; background: #198754; color: white; }
+
+        .vessel-tag {
+            background: #f1f4f9;
+            border-radius: 12px;
+            padding: 15px;
+            border-left: 5px solid #003b8b;
+        }
+        /* === Tahapan Pengiriman === */
+.steps-clean {
+  position: relative;
+  padding: 120px 0;
+  background: url("../a2.jpg") center / cover no-repeat;
+}
+
+/* Overlay gelap biar teks jelas */
+.steps-clean::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.steps-clean .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Judul */
+.steps-title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.steps-subtitle {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.1rem;
+}
+
+/* Grid */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+/* Card */
+/* Card Transparan */
+.step-card {
+  background: rgba(255, 255, 255, 0.15); /* transparan */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+
+  transition: all 0.3s ease;
+}
+
+
+
+.step-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+}
+
+
+/* Nomor */
+.step-number {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #0056d6;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+
+.step-card h6 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.step-card p {
+  color: rgba(255,255,255,0.85);
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-title {
+    font-size: 2.2rem;
+  }
+}
+/* === Why Choose Section === */
+.why-modern {
+  position: relative;
+  padding: 120px 0;
+  background: url("../a2.jpg") center / cover no-repeat;
+}
+
+/* Overlay agar teks jelas */
+.why-modern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.why-modern .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title */
+.why-title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.why-subtitle {
+  color: rgba(255,255,255,0.75);
+  max-width: 640px;
+  margin: auto;
+}
+
+/* Grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+
+/* Card Transparan */
+.why-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.25);
+}
+
+/* Number */
+.why-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #1f8bff;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.why-card h5 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-title {
+    font-size: 2.2rem;
+  }
+}
+/* === Scroll Animation System === */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide Variations */
+.slide-left {
+  transform: translateX(-50px);
+}
+
+.slide-right {
+  transform: translateX(50px);
+}
+
+.slide-left.show,
+.slide-right.show {
+  transform: translateX(0);
+}
+
+/* Delay */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Hover Life */
+.hover-lift {
+  transition: all 0.35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+/* === Contact Section === */
+.contact-modern {
+  background: #06316f;
+  padding: 120px 0;
+  color: #ffffff;
+}
+
+/* Card Form */
+.contact-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 50px 45px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Input */
+.contact-input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+.contact-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Button */
+.contact-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  background: #0d6efd;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 40px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.info-item span {
+  font-size: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  .contact-info {
+    padding-left: 0;
+  }
+}
+``
